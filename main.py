@@ -1,2 +1,9 @@
-print(F"Action change locally in pc in local branch 1")
-print(F"file changes and updated via action")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Docker Flask App"
+
+app.run(host="0.0.0.0", port=5000)
